@@ -1,0 +1,30 @@
+:root {
+--shamrock-green: hsl(146, 51%, 41%);
+--sea-green: hsl(146, 75%, 30%);
+}
+.btn-compra {
+    background-color: #bdc618;
+}
+        
+.button:hover {
+    background-color: #e6f110;
+}
+
+.icon {
+    display: inline;
+    margin: 0 5px;
+}
+.btn-text {
+    display: inline;
+    color: black;
+    margin: 0 5px;
+}
+
+.btn-green {
+    
+    background-color: var(--sea-green)
+}
+
+.btn-green:hover {
+    background-color: var(--shamrock-green)
+}

@@ -1,0 +1,32 @@
+#content {
+    max-height: 100dvh;
+	max-width: 100dvw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    flex-wrap: wrap;
+}
+
+.loadin-msg {
+    background-color: white;
+    background-color: none;
+    color: black;
+    height: 40%;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.product-gallery__container {
+    display: flex;
+    gap: 1rem;
+    margin-block: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+}
+

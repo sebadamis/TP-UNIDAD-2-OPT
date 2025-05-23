@@ -1,0 +1,55 @@
+button {
+    display: block;
+}
+.btn-detail {
+    background-color: var(--shamrock-green) !important;
+}
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+.counter-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ghost-white);
+    border-radius: var(--radius-10);
+    margin-block-end: 15px;
+}
+
+.counter-btn {
+    color: var(--sea-green);
+    font-size: 18px;
+    padding: 19px;
+    transition: var(--transition-1);
+}
+
+.counter-btn ion-icon {
+    --ionicon-stroke-width: 80px;
+}
+
+.counter-btn:is(:hover, :focus) {
+    color: var(--shamrock-green);
+}
+
+.counter-wrapper .span {
+    color: var(--eerie-black);
+    font-weight: var(--fw-700);
+}
+
+@media (min-width: 992px) {
+    .btn-group {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .counter-wrapper {
+        margin-block-end: 0;
+    }
+}

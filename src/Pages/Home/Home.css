@@ -1,0 +1,10 @@
+.prod-gallery-container {
+    height: 100dvh;
+	width: 100dvw;
+    /* background: #939195; */
+    display: block;
+    margin: 15px auto;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}

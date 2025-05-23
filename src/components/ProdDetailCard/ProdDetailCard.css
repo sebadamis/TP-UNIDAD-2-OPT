@@ -1,0 +1,382 @@
+:root {
+    /**
+     * colors
+     */
+
+    --cadet-blue-crayola: hsl(220, 14%, 75%);
+    --dark-electric-blue: hsl(217, 9%, 45%);
+    --shamrock-green: hsl(146, 51%, 41%);
+    --sea-green_10: hsla(146, 75%, 30%, 0.1);
+    --eerie-black: hsl(218, 12%, 13%);
+    --ghost-white: hsl(230, 60%, 98%);
+    --sea-green: hsl(146, 75%, 30%);
+    --honeydew: hsl(146, 74%, 94%);
+    /* --white: hsl(0, 0%, 100%); */
+    --black: hsl(0, 0%, 0%);
+
+    /**
+     * typography
+     */
+
+    /* --ff-kumbh-sans: "Kumbh Sans", sans-serif; */
+
+    --fs-1: 2.8rem;
+    --fs-2: 1.8rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.2rem;
+
+    --fw-500: 500;
+    --fw-700: 700;
+
+    /**
+     * box-shadow
+     */
+
+    --shadow-1: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+    --shadow-2: 0 10px 30px -10px var(--sea-green);
+
+    /**
+     * border radius
+     */
+
+    --radius-circle: 50%;
+    --radius-15: 15px;
+    --radius-12: 12px;
+    --radius-10: 10px;
+    --radius-6: 6px;
+
+    /**
+     * transition
+     */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+    --ionicon-stroke-width: 40px;
+}
+
+html {
+    font-family: var(--ff-kumbh-sans);
+    font-size: 10px;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-electric-blue);
+    font-size: 1.6rem;
+    margin: 40px auto;
+    padding: 20px;
+    /* background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 47%,#a849a3 100%); */
+}
+
+/*-----------------------------------*\
+    #REUSED STYLE
+\*-----------------------------------*/
+
+.container {
+    padding-inline: 15px;
+    border: 2px rgba(128, 128, 128, 0.541) solid;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-----------------------------------*\
+    #MAIN CONTENT
+\*-----------------------------------*/
+
+.img-container {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 5px var(--shamrock-green) solid;
+    border-radius: 15px;
+}
+
+img {
+    /* aspect-ratio: auto 600 / 600; */
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-content {
+    padding-block: 20px 50px;
+    padding-inline: 5px;
+}
+
+.product-content .product-subtitle {
+    color: var(--sea-green);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-content .product-title {
+    color: var(--eerie-black);
+    font-size: var(--fs-1);
+    line-height: 1.1;
+    margin-block: 12px 18px;
+}
+
+.product-content .product-text {
+    font-size: var(--fs-3);
+    line-height: 1.7;
+}
+.stock {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.description {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.product-content .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-block: 30px 25px;
+}
+
+.product-content .price {
+    color: var(--eerie-black);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-700);
+}
+
+.product-content .badge {
+    background-color: var(--sea-green_10);
+    color: var(--sea-green);
+    font-weight: var(--fw-700);
+    padding: 4px 10px;
+    border-radius: var(--radius-6);
+}
+
+.product-content .del {
+    color: var(--cadet-blue-crayola);
+    font-weight: var(--fw-500);
+    margin-inline-start: initial;
+}
+
+.counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ghost-white);
+    border-radius: var(--radius-10);
+    margin-block-end: 15px;
+}
+
+.counter-btn {
+    color: var(--sea-green);
+    font-size: 18px;
+    padding: 19px;
+    transition: var(--transition-1);
+}
+
+.counter-btn ion-icon {
+    --ionicon-stroke-width: 80px;
+}
+
+.counter-btn:is(:hover, :focus) {
+    color: var(--shamrock-green);
+}
+
+.counter-wrapper .span {
+    color: var(--eerie-black);
+    font-weight: var(--fw-700);
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    background-color: var(--sea-green);
+    color: var(--white);
+    font-weight: var(--fw-500);
+    padding: 18px;
+    border-radius: var(--radius-10);
+    box-shadow: var(--shadow-2);
+    transition: var(--transition-1);
+}
+
+.cart-btn ion-icon {
+    --ionicon-stroke-width: 50px;
+}
+
+.cart-btn:is(:hover, :focus) {
+    background-color: var(--shamrock-green);
+}
+
+/*-----------------------------------*\
+    #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+   * responsive for larger than 768px screen
+   */
+
+@media (min-width: 768px) {
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    /**
+     * HEADER
+     */
+
+    .header .container {
+        max-width: 720px;
+    }
+
+    /**
+     * PRODUCT
+     */
+
+    .product {
+        margin-block-start: 45px;
+    }
+
+    .product .container {
+        display: grid;
+        gap: 20px;
+    }
+
+    .product-slides {
+        border-radius: var(--radius-15);
+    }
+
+    .product-banner {
+        max-height: unset;
+    }
+}
+
+/**
+   * responsive for larger than 992px screen
+   */
+
+@media (min-width: 992px) {
+    /**
+     * CUSTOM PROPERTY
+     */
+
+    :root {
+        /**
+       * typography
+       */
+
+        --fs-2: 1.4rem;
+        --fs-4: 1.3rem;
+    }
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+        max-width: 950px;
+    }
+
+    /**
+     * PRODUCT
+     */
+
+    .product {
+        margin-block: 75px 100px;
+    }
+
+    .product .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        /* gap: 90px; */
+    }
+
+    .product-slides {
+        margin-inline: 0;
+    }
+
+    .product-content {
+        padding: 0;
+    }
+
+    .product-title {
+        --fs-1: 4.5rem;
+    }
+
+    /* .btn-group {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .counter-wrapper {
+        margin-block-end: 0;
+    } */
+}
