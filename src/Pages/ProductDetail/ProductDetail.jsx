@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { getProdById } from '../../services/prodservices';
+import { getProdById } from '../../services/prodServices';
 // import ProdDetailCard2 from '../../components/ProdDetailCard2/ProdDetailCard2';
 import ProdDetailCard from '../../components/ProdDetailCard/ProdDetailCard';
 
