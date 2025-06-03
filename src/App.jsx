@@ -9,6 +9,7 @@ import Contact from './Pages/Contact/Contact'
 import ProductDetail from './Pages/ProductDetail/ProductDetail'
 import Login from './Pages/Login/Login'
 import CreateProduct from './Pages/CreateProduct/CreateProduct'
+import Registration from './Pages/Registration/Registration'
 
 
 
@@ -29,7 +30,7 @@ function App() {
           <Route path='/products/:prod_id' element={<ProductDetail/>}/>
           <Route path='/login' element={<Login/>}/>
 
-          {/* <Route path='/ProductDetail' element={<ProductDetail/>}/> */}
+          <Route path='/registration' element={<Registration/>}/>
           <Route path='/crearproducto' element={<CreateProduct/>}/>
 
         </Routes>
